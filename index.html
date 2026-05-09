@@ -602,51 +602,64 @@
                     )}
 
                     {step === 1 && (
-                        <div className="flex-1 flex flex-col bg-blue-600 rounded-[3rem] p-8 md:p-16 text-white animate-slide-right shadow-2xl relative overflow-hidden">
+                        <div className="flex-1 flex flex-col bg-blue-600 rounded-[3rem] p-6 md:p-16 text-white animate-slide-right shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 opacity-10 translate-x-1/4 -translate-y-1/4 scale-150 rotate-12"><IconFish /></div>
-                            <div className="max-w-2xl mx-auto space-y-8 relative z-10 h-full flex flex-col justify-center text-center md:text-left">
-                                <h2 className="font-heading text-5xl md:text-8xl leading-none uppercase tracking-tighter">¿Cómo funciona?</h2>
-                                
-                                <div className="space-y-5 text-blue-50">
-                                    <div className="flex items-start gap-4">
-                                        <div className="mt-1 bg-white/20 p-2 rounded-xl flex-shrink-0">
-                                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            
+                            <div className="max-w-2xl mx-auto space-y-8 relative z-10 h-full flex flex-col justify-center">
+                                <div className="text-center space-y-2">
+                                    <h2 className="font-heading text-5xl md:text-8xl leading-none uppercase tracking-tighter">Cómo crear tu pack</h2>
+                                    <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-blue-200">Personaliza tus 24 raciones en 3 simples pasos</p>
+                                </div>
+
+                                <div className="grid grid-cols-1 gap-4">
+                                    <div className="bg-white/10 p-5 rounded-[2rem] border border-white/10 flex items-center gap-5">
+                                        <div className="w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center font-black text-xl flex-shrink-0">A</div>
+                                        <div>
+                                            <h4 className="font-black text-xs uppercase tracking-widest">Paso 1: Nuestras Playas <span className="text-blue-200 ml-2">(Escoge 8)</span></h4>
+                                            <p className="text-[10px] md:text-xs opacity-80 mt-1 leading-tight">Lo mejor de lonja: Gallineta, Clochinas, Trucha, Lenguado...</p>
                                         </div>
-                                        <p className="text-sm md:text-lg font-medium leading-tight">La <strong>OMS</strong> recomienda consumir pescado entre dos y cuatro veces por semana.</p>
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="mt-1 bg-white/20 p-2 rounded-xl flex-shrink-0">
-                                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                                    
+                                    <div className="bg-white/10 p-5 rounded-[2rem] border border-white/10 flex items-center gap-5">
+                                        <div className="w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center font-black text-xl flex-shrink-0">B</div>
+                                        <div>
+                                            <h4 className="font-black text-xs uppercase tracking-widest">Paso 2: Los Clásicos <span className="text-blue-200 ml-2">(Escoge 10)</span></h4>
+                                            <p className="text-[10px] md:text-xs opacity-80 mt-1 leading-tight">Tus básicos diarios: Merluza, Dorada, Lubina, Emperador, Sepia...</p>
                                         </div>
-                                        <p className="text-sm md:text-lg font-medium leading-tight">Este pack se basa en <strong>raciones</strong> y no en kilos.</p>
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="mt-1 bg-white/20 p-2 rounded-xl flex-shrink-0">
-                                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+
+                                    <div className="bg-white/10 p-5 rounded-[2rem] border border-white/10 flex items-center gap-5">
+                                        <div className="w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center font-black text-xl flex-shrink-0">C</div>
+                                        <div>
+                                            <h4 className="font-black text-xs uppercase tracking-widest">Paso 3: Los Gourmet <span className="text-blue-200 ml-2">(Escoge 6)</span></h4>
+                                            <p className="text-[10px] md:text-xs opacity-80 mt-1 leading-tight">La selección premium: Salmón, Bacalao, Atún, Rape o Calamar.</p>
                                         </div>
-                                        <p className="text-sm md:text-lg font-medium leading-tight"><strong>24 raciones</strong> a tu gusto, de pescado listo para cocinar. Sin sorpresas. Precio cerrado de <strong>{BASE_PACK_PRICE}€</strong>.</p>
-                                    </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="mt-1 bg-white/20 p-2 rounded-xl flex-shrink-0">
-                                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                                        </div>
-                                        <p className="text-sm md:text-lg font-medium leading-tight">Todo está preparado en <strong>sobres especiales de congelación</strong> para que ocupe lo mínimo posible, sin manchar y listo para cocinar.</p>
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-6 border-y border-white/20 text-center md:text-left">
-                                    <div className="space-y-1">
-                                        <h4 className="font-black text-[10px] uppercase text-blue-200 tracking-widest">Sin espinas</h4>
-                                        <p className="text-xs md:text-sm font-light">Limpiamos cada pieza para que solo tengas que cocinar y disfrutar.</p>
+                                <div className="space-y-4 py-4 border-y border-white/10">
+                                    <div className="flex items-start gap-4">
+                                        <div className="mt-1 bg-white/20 p-2 rounded-xl flex-shrink-0">
+                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="3"><path d="M12 2v20M2 12h20" strokeLinecap="round"/></svg>
+                                        </div>
+                                        <p className="text-xs md:text-sm font-medium leading-tight">
+                                            {}
+                                            <strong>Funcionamiento:</strong> Este pack se basa en raciones y no en kilos. Completa las raciones de cada bloque para poder avanzar al siguiente. Así garantizamos un precio cerrado de <strong>{BASE_PACK_PRICE}€</strong> sin importar qué elijas.
+                                        </p>
                                     </div>
-                                    <div className="space-y-1">
-                                        <h4 className="font-black text-[10px] uppercase text-blue-200 tracking-widest">A tu medida</h4>
-                                        <p className="text-xs md:text-sm font-light">Distribuidas en tres selecciones: <strong>Nuestras playas, Los clásicos y Los gourmet</strong>.</p>
+                                    <div className="flex items-start gap-4">
+                                        <div className="mt-1 bg-white/20 p-2 rounded-xl flex-shrink-0">
+                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                                        </div>
+                                        <p className="text-xs md:text-sm font-medium leading-tight">
+                                            {}
+                                            <strong>Ahorro de espacio:</strong> Todo viene sin espinas y en sobres especiales para congelar. No ocupa, no mancha. Listo para cocinar.
+                                        </p>
                                     </div>
                                 </div>
-                                
-                                <div className="space-y-4">
-                                    <h4 className="font-black text-[10px] uppercase text-blue-200 tracking-widest text-center">¿Cuánto dura mi pack?</h4>
+
+                                <div className="pt-4 space-y-6">
+                                    <h4 className="font-black text-[10px] uppercase text-blue-200 tracking-widest text-center">Calcula la duración según tu hogar:</h4>
                                     <div className="grid grid-cols-3 gap-3 text-center">
                                         <div onClick={() => setStep(2)} className="duration-card bg-white/10 p-4 rounded-3xl border border-white/5 group">
                                             <div className="flex justify-center mb-2"><IconPerson qty={1} color="#fff"/></div>
@@ -661,11 +674,10 @@
                                             <p className="font-black text-[8px] uppercase leading-tight">4 personas<br/>2 Semanas</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="pt-4 space-y-6">
-                                    <div className="flex flex-col sm:flex-row items-center gap-4">
+                                    
+                                    <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
                                         <button onClick={() => setStep(0)} className="w-full sm:w-auto text-[10px] font-black uppercase tracking-widest opacity-60 hover:opacity-100 p-4 transition-opacity">Atrás</button>
-                                        <button onClick={() => setStep(2)} className="w-full sm:flex-1 py-6 bg-white text-blue-600 rounded-full font-black text-xs uppercase tracking-[0.3em] shadow-xl hover:bg-blue-50 transition-all">Configurar mi pack</button>
+                                        <button onClick={() => setStep(2)} className="w-full sm:flex-1 py-6 bg-white text-blue-600 rounded-full font-black text-xs uppercase tracking-[0.3em] shadow-xl hover:bg-blue-50 transition-all active:scale-95">Empezar selección (Bloque A)</button>
                                     </div>
                                 </div>
                             </div>
